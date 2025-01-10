@@ -1,0 +1,384 @@
+/* General reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/originals/90/70/32/9070324cdfc07c68d60eed0c39e77573.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure the body takes full height */
+}
+
+/* Navbar styling */
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;  /* Transparent background initially */
+    padding: 15px 0;
+    z-index: 10;
+    transition: background 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+}
+
+#navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#navbar .logo img {
+    width: 400px;  /* Adjust this value to make the logo bigger */
+    height: auto;  /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+/* Navbar items */
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+#navbar ul li {
+    margin-left: 20px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* When the page is scrolled, navbar background color changes */
+body.scrolled #navbar {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+}
+
+/* Landing Page (showing only the PNG image initially) */
+.landing-page {
+    width: 10%; /* Smaller width */
+    height: 10vh; /* Smaller height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+
+/* Sections with no gap between them */
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh; /* Makes the container cover full screen height */
+    max-width: none; /* Remove max-width to allow full width */
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    flex-direction: column;  /* Stacks elements vertically */
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 0;  /* Removed the margin-top to eliminate any gap */
+}
+
+
+/* Heading and Paragraph styles */
+h1, h2 {
+    font-size: 36px;  /* Increased font size */
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;  /* Larger text */
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #FF6347;
+    color: white;
+    padding: 16px 30px; /* Bigger button */
+    border: none;
+    border-radius: 6px;  /* Smoother corners */
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+.result, #companyNameResult {
+    margin-top: 20px;
+    font-size: 22px;  /* Bigger result font size */
+    font-weight: bold;
+    color: #FF6347;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* Smooth transition for sections */
+.startup-idea, .company-name {
+    margin-bottom: 0;  /* No gap between sections */
+}
+
+/* AOS Animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 1s, opacity 1s;
+}
+
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: transform 0.7s, opacity 0.7s;
+}
+
+[data-aos="fade-in"] {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* For the 3D effect */
+body:hover .moving-img {
+    transform: translate3d(var(--x), var(--y), 0);
+}
+
+/* Sticky Footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+   
+    bottom: 0;
+}
+
+/* Ensures sections have enough height to reveal the footer last */
+.landing-page, .startup-idea, .company-name {
+    min-height: 100vh;  /* Ensure full-screen effect */
+}
+/* Body and Navbar Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Landing Text Styles */
+.landing-page {
+    text-align: left;
+    padding-top: 80px; /* Space below navbar */
+    padding-left: 20px;
+}
+
+.landing-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.scroll-text {
+    font-size: 1.2em;
+    color: #007BFF;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+/* Typing Animation */
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    animation: typing 2s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Scroll effect */
+.scroll-text {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+#uniqueDiv {
+    margin-top: 100px; /* Move the div down */
+    text-align: center; /* Center the text */
+}
+
+#animatedText {
+    font-size: 3em; /* Increase text size */
+    font-weight: bold;
+    color: white; /* You can change the color as needed */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white; /* Create the typing effect cursor */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animation for typing */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Contact Form Section */
+#contactFormSection {
+    background-color: #fff;
+    padding: 50px 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contactFormSection h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contactFormSection p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contactFormSection form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#contactFormSection label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#contactFormSection input,
+#contactFormSection textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contactFormSection button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contactFormSection button:hover {
+    background-color: #c0392b;
+}
+
+#contactFormSection p:last-of-type {
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}

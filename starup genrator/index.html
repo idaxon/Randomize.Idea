@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomize.Idea | Startup Idea & Company Name Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo" id="companyLogo" style="width: 150px; height: auto;"> <!-- Company logo -->
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contactFormSection">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="uniqueDiv">
+        <p id="animatedText">We Make Random Look Brilliant!</p>
+    </div>
+
+    <div style="margin-top: 250px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); font-family: 'Poppins', sans-serif;">
+        <center> 
+            <p>Press the Button.</p>
+            <p>Get an Idea. Sound Crazy?</p>
+            <p>It’s supposed to be! 🚀 Who needs a brainstorming session when you’ve got a button that delivers the unexpected?</p>
+            <p>Welcome to Randomize.Idea 🎲</p>
+            <p>Where randomness meets brilliance.</p>
+        </center>
+    </div>
+    
+    <!-- About Section -->
+    <div id="about" class="container" style="padding: 50px 20px;">
+        <h2>About Randomize.Idea</h2>
+        <p>At Randomize.Idea, we believe in the power of randomness. Our mission is to spark creativity and innovation by providing startup ideas and company names at the push of a button. Whether you’re looking to create the next big thing or simply need a fun way to jumpstart your imagination, we’ve got you covered!</p>
+        <p>Let randomness lead the way to brilliance.</p>
+        <p>And hey, this is just the beginning! In the future, we’ll be randomly generating even more crazy ideas. Who knows? Maybe we’ll start generating your next vacation spot or the perfect pizza topping combo! Stay tuned for even more randomness coming your way. 🎉🍕</p>
+
+    </div>
+
+  
+
+    <!-- Startup Idea Generator Section -->
+    <div class="container startup-idea" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Startup Idea Generator</h1>
+        <p>Click the button to discover your next big idea!</p>
+        <button onclick="generateRandomIdea()">Mystery Button (Startup Idea)</button>
+        <div class="result" id="result"></div><br><br>
+        <p>Scroll Down To Get Company Name Also</p>
+    </div>
+
+    <!-- Company Name Generator Section -->
+    <div class="container company-name" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Need a Company Name?</h2>
+        <button onclick="generateCompanyName()">Generate Company Name</button>
+        <div id="companyNameResult"></div>
+    </div>
+
+    <!-- Contact Section -->
+<div id="contactFormSection" class="container" style="padding: 50px 20px;">
+    <h2>Need Help? Or Just Wanna Say Hi? (We Promise Not to Ignore You... Maybe)</h2>
+    <p>Got a question, suggestion, or maybe just a random thought? Drop it below. But no, we won't make you a cup of coffee or give you free advice—unless you're paying in pizza.</p>
+    
+    <form id="contactForm" action="submit_form.php" method="POST">
+        <label for="name">Your Name (We won't stalk you, promise):</label>
+        <input type="text" id="name" name="name" required placeholder="What's your name?" />
+        
+        <label for="email">Your Email (So we can pretend to reply):</label>
+        <input type="email" id="email" name="email" required placeholder="Your email address" />
+        
+        <label for="message">Your Message (Or just say 'hi'):</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Let us know your random thoughts..."></textarea>
+        
+        <button type="submit">Send It (If You Dare)</button>
+    </form>
+
+    <p>Don't worry, we don't check our email daily. But hey, we'll get to you eventually... maybe.</p>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Randomize.Idea. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS library -->
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init();
+    </script>
+</body>
+</html>
